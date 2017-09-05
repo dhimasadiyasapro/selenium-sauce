@@ -1,0 +1,25 @@
+language: ruby
+cache: bundler
+
+rvm:
+  - 2.4.1
+
+before_install:
+  - gem update --system
+  - gem --version
+install: gem install rails
+
+before_script:
+  - 'bundle install'
+
+addons:
+  sauce_connect:
+    username: "dhimasadiyasapro"
+    access_key: "a4834164-d41a-4c31-893f-82e4fb721f9d"
+branches:
+  only:
+    - saos
+
+notifications:
+  email:
+    - dhimas@mokapos.com
